@@ -1,0 +1,195 @@
+//http://www.lamourfou.be/en
+
+$primary : #95714b; //brown
+$primary-darken : darken($primary, 22%);
+$secondary : #cb0000; //red
+$white: #fff;
+$black: #000;
+$header-font: 'Fredericka the Great', cursive;
+
+/** Global
+=============================**/
+body {
+  color:$primary;
+}
+.hidden {
+  display:none;
+}
+
+/** Customize Material
+============================**/
+
+
+
+/** Navigation
+============================**/
+nav {
+  background:none;
+  transition:all .5s;
+}
+nav ul li:hover, nav ul li.active {
+    background-color: rgba(0,0,0,0.65);
+}
+.side-nav {
+  background-color:$secondary;
+  a {
+    color:$white;
+  }
+}
+
+/** Layout
+===========================**/
+footer {
+  background-color:$primary-darken;
+  padding:20px 0;
+  color:$white;
+}
+
+
+/** Homepage
+==========================**/
+#splash {
+  background:url(../images/splash-background.jpg) no-repeat;
+  height:600px;
+  margin-top:-80px;
+  .inner-container {
+    border:10px rgba(149, 113, 75, 0.5) solid;
+    margin-top:10%;
+    justify-content: center;
+    transition: border .5s;
+    &:hover {
+      border:10px rgba(149, 113, 75, 1) solid;
+    }
+    h1 {
+      color:$white;
+      font:bold 3rem $header-font;
+      small {
+        font-size:2rem;
+      }
+    }
+  }
+}
+#foodMenu {
+  background:url(../images/menu-background.jpg) no-repeat;
+  background-size:cover;
+  background-position:top center;
+  padding-top:20px;
+  padding-bottom:20px;
+  color:$primary-darken;
+  .container {
+    background:rgba(255,255,255,.5);
+    padding:30px;
+  }
+  h3 {
+    font-size:2rem;
+    color:$primary-darken;
+    &:nth-child(1){
+      margin-top:0;
+      padding-top:20px;
+    }
+  }
+}
+
+#planningEvent {
+  background:url(../images/planningEvent-background.jpg) no-repeat;
+  background-size:cover;
+  height:450px;
+  padding-top:30px;
+  position:relative;
+  .planningHolder {
+    //position:absolute;
+    margin-top: 20%;
+    //left:35%;
+    text-align:center;
+    h3 {
+      color:$white;
+      margin-bottom:50px;
+    }
+    p {
+      margin-top:50px;
+      color:$white;
+      font-size:2rem;
+    }
+    .btn-custom {
+      width:50%;
+      background:$white;
+      padding:20px 50px;
+      position:relative;
+      transition:background .5s;
+      &:hover {
+        background:none;
+      }
+      &:after {
+        content :'';
+        position:absolute;
+        bottom:-5px;
+        top:-5px;
+        right:-5px;
+        left:-5px;
+        border: 2px solid rgba(255, 255, 255, 0.36);
+      }
+    }
+  }
+}
+
+/** Contact Us Page
+============================**/
+#contactUs {
+  background:url(../images/contact-us-background.jpg) no-repeat;
+  background-size:cover;
+  //height:700px;
+  margin-top: -64px;
+  .holder {
+    padding:50px 20px;
+    background-color:rgba(255,255,255,.35);
+    color:$white;
+    h3 {
+      font-weight:bold;
+      font-size:1.5rem;
+    }
+    .inner-container {
+      width:70%;
+      margin:0 auto;
+      i {
+        margin-right:50px;
+      }
+    }
+  }
+}
+
+/** Sticky Footer (https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/)
+==========================**/
+.Site {
+  display:flex;
+  min-height:100vh;
+  flex-direction:column;
+}
+.Site-content {
+  flex: 1;
+}
+
+/** Responsive
+=========================**/
+@media(min-width:560px){
+  #splash {
+    .inner-container {
+      padding-top:50px;
+      padding-bottom:50px;
+    }
+  }
+}
+@media(min-width:960px){
+  #planningEvent {
+    height:700px;
+  }
+  #splash {
+    height:650px;
+    .inner-container {
+      padding-top:50px;
+      padding-bottom:50px;
+      h1 {
+        font-size:4rem;
+      }
+    }
+  }
+}
