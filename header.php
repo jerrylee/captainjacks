@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="http://localhost:8888/captain-jacks//css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body class="Site">
